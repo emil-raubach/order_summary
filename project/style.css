@@ -18,9 +18,12 @@ main {
 
 #container {
     width: 450px;
-    height: 750px;
+    height: 650px;
     background-color: #fff;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50px 15px 48px 287px 50px;
+    grid-template-rows: 220px 200px 120px 50px 10px 100px;
 }
 
 img {
@@ -28,32 +31,47 @@ img {
     border-top-left-radius: 10px;
 }
 
-.card_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.lead {
     height: 550px;
     text-align: center;
+    grid-row: 2 / 3;
+    grid-column: 3 / 5;
+    /* align-content: center; */
+    justify-self: center;
+    padding-top: 20px;
 }
 
-.card_text .payment {
+.lead p {
+    color: hsl(224, 23%, 55%);
+}
+
+.payment {
     display: inline-block;
     text-decoration: none;
+    text-align: center;
     width: 350px;
-    height: 3rem;
+    height: 50px;
     background-color: hsl(245, 75%, 52%);
     color: #fff;
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px 10px lightgray;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
 }
 
 
-.card_text .cancel {
+.cancel {
     text-decoration: none;
     color: hsl(224, 23%, 55%);
+    grid-row: 6 / 7;
+    grid-column: 2 / 5;
+    /* align-self: center; */
+    justify-self: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .lead h2 {
@@ -79,6 +97,17 @@ img {
     background: hsla(225, 100%, 94%, 0.3);
     padding: 0 20px;
     border-radius: 5px;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+.plan img {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.plan p {
+    color: hsl(224, 23%, 55%);
 }
 
 .attribution { font-size: 11px; text-align: center; }
